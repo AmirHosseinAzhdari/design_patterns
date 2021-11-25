@@ -13,7 +13,7 @@ class File:
     The edit method in WrongB class does a lot of work in class B, and that's wrong.
     Also, if we want to add another format to the file, we have to add another 
     condition to the edit method, which is not true.
-    To solve these problems, we can use the factory design Pattern, 
+    To solve these problems, we can use the factory design Pattern,
     which puts code changes in the right_factory file
 """
 class WrongB:

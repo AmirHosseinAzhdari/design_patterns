@@ -13,7 +13,6 @@ class Product(ABC):
     def edit(self):
         pass
     
-    
 class Json(Product):
     def edit(self):
         return "Editing json file ..."
