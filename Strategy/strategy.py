@@ -1,4 +1,4 @@
-"""Strategy(Behavior)
+"""Strategy (Behavior)
 
 A class with various algorithms that can be used by any of them at runtime
 

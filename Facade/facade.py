@@ -1,5 +1,4 @@
-"""
-    Facade(Structural)
+"""Facade (Structural)
         Reduce complexity in code (Interface class)
 """
 

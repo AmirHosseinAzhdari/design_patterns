@@ -1,4 +1,4 @@
-"""Iterator(Behavior)
+"""Iterator (Behavioral)
     1- Iterable, 2-Iteration
         __iter__, __next__
 

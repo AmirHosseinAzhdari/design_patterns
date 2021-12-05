@@ -1,4 +1,4 @@
-""" Abstract Factory
+""" Abstract Factory (Structural)
 
 Car => Benz, Bmw => Suv, Coupe
     benz suv -> gla, glc

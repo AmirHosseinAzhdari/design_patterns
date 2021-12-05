@@ -1,4 +1,4 @@
-""" Prototype (creational)
+""" Prototype (Creational)
 
 copy of an object
 

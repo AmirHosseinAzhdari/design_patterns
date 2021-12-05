@@ -1,6 +1,4 @@
-"""
-    Creational:
-        Singleton
+"""Singleton (Creational)
 """
 
 # python uses singleton for multiple imports.

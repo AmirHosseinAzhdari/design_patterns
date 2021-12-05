@@ -1,4 +1,4 @@
-"""Adapter(Structural)
+"""Adapter (Structural)
 
     1- Adaptee, 2-Adapter, 3-Client
     
