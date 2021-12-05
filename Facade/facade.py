@@ -1,6 +1,6 @@
 """
     Facade(Structural)
-        Reduce complexity in code
+        Reduce complexity in code (Interface class)
 """
 
 class Raw:
