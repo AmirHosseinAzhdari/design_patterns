@@ -1,5 +1,5 @@
 """
-    Proxy
+    Proxy (structural)
 """
 
 class Db:

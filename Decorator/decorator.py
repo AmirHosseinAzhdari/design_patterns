@@ -1,5 +1,5 @@
 """
-Decorator()
+Decorator(structural)
     decorator pattern != python decorator
     
 Add properties for an object -> we can use python decorator
