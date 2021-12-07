@@ -6,28 +6,32 @@ copy of an object
 
 from copy import deepcopy
 
+
 class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
+
 class Prototype:
     """ sample of prototype copy
     """
+
     def __init__(self):
         self._objects = {}
-      
+
     def register(self, name, obj):
         self._objects[name] = obj
-        
+
     def unregister(self, name):
         del self._objects[name]
-        
+
     def clone(self, name, **kwargs):
         clone_obj = deepcopy(self._objects.get(name))
         clone_obj.__dict__.update(kwargs)
         return clone_obj
-        
+
+
 # instance of persons class
 p1 = Person("amir", 32)
 

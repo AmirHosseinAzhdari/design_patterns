@@ -11,92 +11,113 @@ Car => Benz, Bmw => Suv, Coupe
 
 from abc import ABC, abstractmethod
 
+
 class Car(ABC):
     @abstractmethod
-    def call_suv(self):
+    def call_suv(self, model):
         pass
-    
+
     @abstractmethod
-    def call_coupe(self):
+    def call_coupe(self, model):
         pass
-    
+
+
 # ------------------------------------------------
 
 class Benz(Car):
-    def call_suv(model):
+    def call_suv(self, model):
         return model
-    
-    def call_coupe(model):
+
+    def call_coupe(self, model):
         return model
-    
+
+
 class Bmw(Car):
-    def call_suv(model):
+    def call_suv(self, model):
         return model
-    
-    def call_coupe(model):
+
+    def call_coupe(self, model):
         return model
-    
+
+
 # ------------------------------------------------
 
 class Suv(ABC):
     @abstractmethod
     def creating_suv(self):
         pass
-    
+
+
 class Coupe(ABC):
     @abstractmethod
     def creating_coupe(self):
         pass
-    
+
+
 # ------------------------------------------------
 
-class Gla(Suv):
+class Gla(Suv, Benz):
     def creating_suv(self):
-        print("This is yuor suv benz gla ...")
-        
-class Glc(Suv):
+        print("This is your suv benz gla ...")
+
+
+class Glc(Suv, Benz):
     def creating_suv(self):
-        print("This is yuor suv benz glc ...")
-        
-class X1(Suv):
+        print("This is your suv benz glc ...")
+
+
+class X1(Suv, Bmw):
     def creating_suv(self):
-        print("This is yuor suv bmw x1 ...")
-        
-class X2(Suv):
+        print("This is your suv bmw x1 ...")
+
+
+class X2(Suv, Bmw):
     def creating_suv(self):
-        print("This is yuor suv bmw x2 ...")
-        
+        print("This is your suv bmw x2 ...")
+
+
 # ------------------------------------------------
 
-class Cls(Coupe):
+class Cls(Coupe, Benz):
     def creating_coupe(self):
-        print("This is yuor coupe benz cls ...")
-        
-class Eclass(Coupe):
+        print("This is your coupe benz cls ...")
+
+
+class Eclass(Coupe, Benz):
     def creating_coupe(self):
-        print("This is yuor coupe benz e-class ...")
-        
-class M2(Coupe):
+        print("This is your coupe benz e-class ...")
+
+
+class M2(Coupe, Bmw):
     def creating_coupe(self):
-        print("This is yuor coupe bmw m2 ...")
-        
-class M4(Coupe):
+        print("This is your coupe bmw m2 ...")
+
+
+class M4(Coupe, Bmw):
     def creating_coupe(self):
-        print("This is yuor coupe bmw m4 ...")
-        
+        print("This is your coupe bmw m4 ...")
+
+
 # ------------------------------------------------
 
-def client_suv(corp, model):
-    suv = corp().call_suv(model())
-    suv.creating_suv()
-    
-def client_coupe(corp, model):
-    coupe = corp().call_suv(model())
-    coupe.creating_coupe()
-    
+def order_suv(corp, model):  # corp is company and model is the model of car
+    if issubclass(model, corp):
+        suv = corp().call_suv(model())
+        suv.creating_suv()
+    else:
+        raise NameError()
+
+
+def order_coupe(corp, model):
+    if issubclass(model, corp):
+        coupe = corp().call_coupe(model())
+        coupe.creating_coupe()
+    else:
+        raise NameError()
+
+
 # ------------------------------------------------
 
-client_coupe(Bmw())
-client_coupe(Benz())
-client_suv(Bmw())
-client_suv(Benz())
+order_coupe(Benz, Eclass)  # This is your coupe benz e-class ...
+order_suv(Bmw, X2)  # This is your coupe benz e-class ...
+order_suv(Bmw, M2)  # Error
