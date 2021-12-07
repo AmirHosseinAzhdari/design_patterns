@@ -8,7 +8,7 @@ import math as m2
 print(id(m1))
 print(id(m2))
 
-# Singleton class
+
 class Singleton(type):
     _instance = None
     
@@ -20,7 +20,7 @@ class Singleton(type):
 class Db(metaclass=Singleton):
     pass
 
-# create 2 instance of Db class
+
 d1 = Db()
 d2 = Db()
 
