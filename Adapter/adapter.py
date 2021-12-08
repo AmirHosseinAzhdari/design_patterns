@@ -1,5 +1,4 @@
 """Adapter (Structural)
-
     1- Adaptee, 2-Adapter, 3-Client
     
 When we want to connect two unrelated classes use adapter pattern
@@ -15,7 +14,7 @@ class Adapter:
     _socket = None
     _pin_type = '3To2'
 
-    def __init__(self, socket) -> None:
+    def __init__(self, socket):
         self._socket = socket
 
 
