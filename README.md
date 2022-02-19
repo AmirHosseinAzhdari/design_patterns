@@ -1,5 +1,4 @@
 ## <div align="center">Design patterns example with python</div>
-### <div align="center">December 05 2021</div>
 
 
 ## Description
